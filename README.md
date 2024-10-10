@@ -15,7 +15,7 @@ IP or URL you want to expose via coolify.
 ```yaml
 services:
   webapp:
-    image: ghcr.io/cabaalexander/coolify-nginx-reverse-proxy:latest
+    image: ghcr.io/nicanordlc/coolify-nginx-reverse-proxy:latest
     environment:
       - SERVICE_FQDN_WEBAPP_80
       - PROXY_URL=${PROXY_URL:-https://example.com/}
