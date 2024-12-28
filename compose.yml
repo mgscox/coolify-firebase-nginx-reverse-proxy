@@ -1,13 +1,9 @@
 services:
   firebase-proxy:
-    image: ghcr.io/mgscox/coolify-firebase-nginx-reverse-proxy
     build:
       context: .
-      platforms:
-        - "linux/amd64"
-        - "linux/arm64"
       tags:
-        - "ghcr.io/mgscox/coolify-firebase-nginx-reverse-proxy"
+        - "mgscox/coolify-firebase-nginx-reverse-proxy"
       labels:
         org.opencontainers.image.source: https://github.com/mgscox/coolify-firebase-nginx-reverse-proxy
     environment:
