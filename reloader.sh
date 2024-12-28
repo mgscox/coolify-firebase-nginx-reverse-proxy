@@ -9,5 +9,6 @@ do
   echo "Detected Nginx Configuration Change"
   echo "Executing: nginx -s reload"
   nginx -s reload
+  nginx -T
  fi
 done
