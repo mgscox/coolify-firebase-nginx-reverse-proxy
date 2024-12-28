@@ -1,14 +1,14 @@
-# coolify-nginx-reverse-proxy
+# coolify-firebase-nginx-reverse-proxy
 
-Simple nginx reverse proxy on coolify.
+Simple nginx reverse proxy on coolify for firebase authentication..
 
-This could be useful if you want to expose a local IP:[PORT] on your LAN to the outside world.
+Referenced docs: https://github.com/mgscox/coolify-firebase-nginx-reverse-proxy.git
 
 ## Environment variables
 
-### `PROXY_URL`
+### `FIREBASE_ID`
 
-IP or URL you want to expose via coolify.
+The firebase project id you wish to support authentication for
 
 ## `compose.yml` setup
 
@@ -18,6 +18,6 @@ services:
     image: ghcr.io/nicanordlc/coolify-nginx-reverse-proxy:latest
     environment:
       - SERVICE_FQDN_WEBAPP_80
-      - PROXY_URL=${PROXY_URL:-https://example.com/}
+      - FIREBASE_ID=${FIREBASE_ID}
     restart: unless-stopped
 ```
