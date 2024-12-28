@@ -14,8 +14,8 @@ The firebase project id you wish to support authentication for
 
 ```yaml
 services:
-  webapp:
-    image: ghcr.io/nicanordlc/coolify-nginx-reverse-proxy:latest
+  firebase-proxy:
+    image: ghcr.io/mgscox/coolify-firebase-nginx-reverse-proxy
     environment:
       - SERVICE_FQDN_WEBAPP_80
       - FIREBASE_ID=${FIREBASE_ID}
