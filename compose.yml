@@ -7,7 +7,6 @@ services:
       labels:
         org.opencontainers.image.source: https://github.com/mgscox/coolify-firebase-nginx-reverse-proxy
     environment:
-      - SERVICE_FQDN_WEBAPP_80
       - FIREBASE_ID=${FIREBASE_ID}
       - PROXY_URL=https://${FIREBASE_ID}.firebaseapp.com;
     restart: unless-stopped
